@@ -16,9 +16,8 @@ const logger = createLogger({
   ]
 });
 
-const central = require('./central.js');
-central.startCentral(logger.child({ mode: 'central' }));
+// const central = require('./central.js');
+// central.startCentral(logger.child({ mode: 'central' }));
 
-// const peripheral = require('./peripheral.js');
-// peripheral.startPeripheral(logger.child({ mode: 'peripheral' }));
-
+const peripheral = require('./peripheral.js');
+peripheral.startPeripheral(logger.child({ mode: 'peripheral' }));

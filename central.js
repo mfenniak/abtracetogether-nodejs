@@ -12,7 +12,6 @@ function startCentral(logger) {
   noble.on('stateChange', async (nobelState) => {
     logger.info('event stateChange', nobelState);
     if (nobelState === 'poweredOn') {
-      state = 'ready';
       logger.info('action startScanningAsync');
       await noble.startScanningAsync([abTraceTogetherServiceUuid], false);
     }
